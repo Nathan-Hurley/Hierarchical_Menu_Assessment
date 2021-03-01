@@ -26,7 +26,7 @@ namespace Hierarchical_Menu_Assessment
 
 		public UserAdmin EditAdminUser(string userName, string newUserName)
 		{
-			var currentUser = userService.Get(userName);
+			var currentUser = userService.GetUser(userName);
 			userService.Edit(currentUser, newUserName);
 			return (UserAdmin)userService;
 		}
